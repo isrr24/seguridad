@@ -20,3 +20,8 @@ mail: lromero@securecorp.local
 uidNumber: 10002
 gidNumber: 10002
 homeDirectory: /home/lromero
+
+dn: cn=rrhh,ou=groups,dc=securecorp,dc=local
+objectClass: groupOfNames
+cn: rrhh
+member: uid=lromero,ou=people,dc=securecorp,dc=local
