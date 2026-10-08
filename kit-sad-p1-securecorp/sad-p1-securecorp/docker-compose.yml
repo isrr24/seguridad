@@ -64,6 +64,19 @@ services:
       - servidor
 
   # ✍️ Parte C: aquí va el servicio web
+  web:
+    build: web                         # la carpeta donde está su Dockerfile
+    container_name: sad-p1-web
+    hostname: web
+    volumes:
+      - ./pki:/pki:ro
+      - ./krb5/krb5.conf:/etc/krb5.conf:ro        # ¿dónde lo pone el cliente?
+    networks:
+      securecorp:
+        aliases:
+          - web.securecorp.local                        # el nombre con el que la conocen las demás máquinas
+    depends_on:
+      - servidor
 
 networks:
   securecorp:
