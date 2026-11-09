@@ -56,12 +56,23 @@ Nmap done: 1 IP address (1 host up) scanned in 1.30 seconds   
    (`./lab.sh comercial`) hace `curl http://172.16.10.20:8080`. Pega lo que sale en el firewall:  
 ```  
 (pega aquí la salida de tcpdump)      
+tcpdump: verbose output suppressed, use -v[v]... for full protocol decode
+listening on wan, link-type EN10MB (Ethernet), snapshot length 262144 bytes
+16:15:27.445349 IP 198.51.100.62.45586 > 198.51.100.254.51820: UDP, length 32
+16:15:27.445519 IP 198.51.100.62.45586 > 198.51.100.254.51820: UDP, length 148
+16:15:27.445804 IP 198.51.100.254.51820 > 198.51.100.62.45586: UDP, length 92
+16:15:27.446156 IP 198.51.100.62.45586 > 198.51.100.254.51820: UDP, length 32
+16:15:32.565316 ARP, Request who-has 198.51.100.62 tell 198.51.100.254, length 28
+16:15:32.565377 ARP, Reply 198.51.100.62 is-at 7a:8a:5f:c5:68:f9, length 28
+6 packets captured
+6 packets received by filter
+0 packets dropped by kernel
          
       
    
 ```  
 En dos líneas: ¿qué se ve por la calle y qué NO se ve?  
-   
+
     
    
   **Bloque C · Para la defensa (C4)**  
